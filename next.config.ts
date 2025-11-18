@@ -26,6 +26,11 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "cloud.appwrite.io",
       },
+      {
+        protocol: "https",
+        hostname: "sgp.cloud.appwrite.io",
+        pathname: "/v1/storage/buckets/**",
+      },
     ],
   },
 };

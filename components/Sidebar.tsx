@@ -5,7 +5,7 @@ import Image from "next/image";
 import { navItems } from "@/constants";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-
+import logo  from "../components/ui/Logo.svg"
 interface Props {
   fullName: string;
   avatar: string;
@@ -19,11 +19,11 @@ const Sidebar = ({ fullName, avatar, email }: Props) => {
     <aside className="sidebar">
       <Link href="/">
         <Image
-          src="/assets/icons/logo-full-brand.svg"
+          src={logo}
           alt="logo"
           width={160}
           height={50}
-          className="hidden h-auto lg:block"
+          className="hidden h-auto lg:block mb-6"
         />
 
         <Image
@@ -70,7 +70,7 @@ const Sidebar = ({ fullName, avatar, email }: Props) => {
         className="w-full"
       />
 
-      <div className="sidebar-user-info">
+      <div className="sidebar-user-info ">
         <Image
           src={avatar}
           alt="Avatar"
@@ -78,7 +78,7 @@ const Sidebar = ({ fullName, avatar, email }: Props) => {
           height={44}
           className="sidebar-user-avatar"
         />
-        <div className="hidden lg:block">
+        <div className="hidden lg:block bg-sla">
           <p className="subtitle-2 capitalize">{fullName}</p>
           <p className="caption">{email}</p>
         </div>
